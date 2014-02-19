@@ -1,4 +1,8 @@
 IpsumGen::Application.routes.draw do
+  resources :generators, only: [:new, :create, :show] do
+    resources :admin, only: [:index]
+  end
+  resources :lorem_ipsums, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

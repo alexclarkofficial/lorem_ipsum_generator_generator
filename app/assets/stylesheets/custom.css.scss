@@ -1,0 +1,104 @@
+/* Base Colors */
+/* Fonts */
+@font-face { font-family: 'signikabold'; src: url("fonts/signika-bold-webfont.eot"); src: url("fonts/signika-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/signika-bold-webfont.woff") format("woff"), url("fonts/signika-bold-webfont.ttf") format("truetype"), url("fonts/signika-bold-webfont.svg#signikabold") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'signikalight'; src: url("fonts/signika-light-webfont.eot"); src: url("fonts/signika-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/signika-light-webfont.woff") format("woff"), url("fonts/signika-light-webfont.ttf") format("truetype"), url("fonts/signika-light-webfont.svg#signikalight") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'signikaregular'; src: url("fonts/signika-regular-webfont.eot"); src: url("fonts/signika-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/signika-regular-webfont.woff") format("woff"), url("fonts/signika-regular-webfont.ttf") format("truetype"), url("fonts/signika-regular-webfont.svg#signikaregular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'signikasemibold'; src: url("fonts/signika-semibold-webfont.eot"); src: url("fonts/signika-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/signika-semibold-webfont.woff") format("woff"), url("fonts/signika-semibold-webfont.ttf") format("truetype"), url("fonts/signika-semibold-webfont.svg#signikasemibold") format("svg"); font-weight: normal; font-style: normal; }
+
+/* General Formatting */
+h1, h2, h3, h4, h5 { font-family: "museo-slab",serif; color: #542f68; margin: 1.5em 0 0.5em 0; }
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1.6em; }
+
+h3 { font-size: 1.4em; }
+
+h4 { font-size: 1.2em; }
+
+h5 { font-size: 1em; }
+
+body { font-family: 'source-sans-pro', sans-serif; font-size: 1em; color: #542f68; background-color: #ffffff; line-height: 1.4; }
+
+p { line-height: 1.8; }
+
+a { color: #542f68; text-decoration: none; -webkit-transition: all ease .25s; -moz-transition: all ease .25s; transition: all ease .25s; }
+
+a:hover { color: #9e54bd; text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+* { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+
+ul li { list-style-type: circle; padding-bottom: 0.3em; }
+
+ol li { padding-bottom: 0.3em; }
+
+/* Input Fields */
+.input-field { font-family: 'source-sans-pro', sans-serif; color: #542f68; margin-bottom: .625em; padding: 1em; font-size: 1em; text-align: center; width: 13%; margin-left: 2em; vertical-align: top; margin-top: 8px; -webkit-appearance: none; border: 2px solid #542f68; }
+
+.input-field:focus { border: 2px solid #9e54bd; outline: none; }
+
+textarea.submit-quotes { font-family: 'source-sans-pro', sans-serif; color: #542f68; min-height: 200px; border: 2px solid #542f68; width: 50%; margin: 1em; padding: 0.5em; }
+textarea.submit-quotes:focus { outline: none; border: 2px solid #9e54bd; }
+
+/* Buttons */
+.button { font-family: "museo-slab",serif; font-size: 2em; padding: 0.5em 1em; display: inline-block; font-style: normal; text-decoration: none; background: #542f68; border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; -webkit-border-radius: 3px; color: #fff; text-shadow: 1px 1px 0px #9e54bd; -webkit-transition: all ease .25s; -moz-transition: all ease .25s; transition: all ease .25s; }
+.button:hover { color: #fff; text-decoration: none; background: #703f8b; }
+.button:visited { text-decoration: none; }
+
+.submit-btn { -webkit-appearance: none; border: none; margin: 1em auto 2em auto; width: 50%; }
+
+.copy-btn { font-size: 1em; text-shadow: none; margin-bottom: 0.5em; }
+
+.header-row:after { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: .15; background-image: url(images/noise3.png); }
+
+/* Header */
+.header-row { background: #9e54bd; border-bottom: 11px solid #542f68; }
+.header-row h1 { display: inline-block; color: #fff; font-size: 4em; margin: 1em 0 1em 0; text-shadow: 4px 3px 0 #9e54bd, 9px 8px 0 rgba(0, 0, 0, 0.2); }
+.header-row .subipsum-logo { margin-top: -13px; margin-right: 10px; border-radius: 50%; box-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2); position: absolute; bottom: -39px; left: 46%; }
+
+.fun-bg:after { content: ''; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; opacity: .15; z-index: -1; background-image: url(images/noise4.png); }
+
+.fun-container h1 { display: inline-block; color: #fff; font-size: 3em; text-shadow: 4px 3px 0 #9e54bd, 9px 8px 0 rgba(0, 0, 0, 0.2); }
+.fun-container h2 { font-size: 4em; color: #542f68; margin: 0; text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2); }
+.fun-container h3 { font-family: 'source-sans-pro', sans-serif; color: #8d4fae; margin-top: 0.5em; text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5); }
+.fun-container .subipsum-logo { display: inline-block; border-radius: 50%; box-shadow: 3px 1px 0 rgba(0, 0, 0, 0.15); }
+.fun-container .value-prop { border-top: 7px solid #542f68; margin-top: 5em; padding: 1.5em 2em 2em 2em; }
+
+.action-container { background: rgba(246, 246, 246, 0.34); padding: 3em 0; border-top: 1px solid #e9e9e9; }
+.action-container span { font-size: 3em; font-family: "museo-slab",serif; }
+
+.content-bg { background: rgba(246, 246, 246, 0.34); }
+
+.content-container { background: rgba(255, 255, 255, 0.72); padding: 3.5em 4em; min-height: 250px; }
+
+.filler { opacity: 0.4; }
+.filler h2 { display: inline-block; }
+.filler .fa-reply { margin-left: 20px; -webkit-transform: rotate(113deg); -moz-transform: rotate(113deg); -ms-transform: rotate(113deg); -o-transform: rotate(113deg); transform: rotate(113deg); }
+.filler .fa-6x { font-size: 6em; }
+
+/* Footer */
+footer { font-family: "museo-slab",serif; font-weight: 700; border-top: 1px solid #e9e9e9; background: #fff; color: #542f68; padding: 4em 0 2em 0; text-shadow: 1px 1px 0px #fff; }
+footer .fa { color: #542f68; text-shadow: 1px 1px 0px #fff; margin-left: 1em; -webkit-transition: all ease .25s; -moz-transition: all ease .25s; transition: all ease .25s; }
+footer .fa:hover { color: #b379cb; }
+
+@media only screen and (max-width: 930px) { .fun-container h2 { font-size: 3em; } }
+@media only screen and (max-width: 790px) { .action-container span { font-size: 2em; margin-top: 11px; display: inline-block; }
+  .header-row h1 { font-size: 3em; } }
+@media only screen and (max-width: 680px) { textarea.submit-quotes, .submit-btn { width: 64%; }
+  .content-container { background: rgba(255, 255, 255, 0.72); padding: 0.5em 1.5em; }
+  .filler { margin: 1em; } }
+@media only screen and (min-width: 499px) and (max-width: 680px) { .action-container .input-field { width: 83%; margin-left: 0; } }
+@media only screen and (max-width: 500px) { .header-row h1 { font-size: 2em; margin: 1em 0 1.5em 0; text-shadow: 2px 2px 0 #9e54bd, 5px 4px 0 rgba(0, 0, 0, 0.2); }
+  .fun-container .value-prop { margin-top: 1em; padding: 1em 0em 0em 0em; }
+  .fun-container h2 { font-size: 2em; }
+  .fun-container h3 { font-size: 1.2em; }
+  .action-col { width: 100%; margin-bottom: 20px; }
+  .input-field { width: 26%; margin-left: 1em; } }
+@media only screen and (max-width: 480px) { .filler .fa-6x { font-size: 3em !important; }
+  .filler h2 { font-size: 1em; } }
+@media only screen and (max-width: 430px) { .header-row .subipsum-logo { left: 40%; } }
