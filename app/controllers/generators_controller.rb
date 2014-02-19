@@ -4,7 +4,7 @@ class GeneratorsController < ApplicationController
   def show
     @generator = Generator.find(params[:id])
     @lorem_ipsum = @generator.lorem_ipsums.build
-    @ipsums = @generator.lorem_ipsums
+    @ipsums = @generator.lorem_ipsums.approved_scope
   end
 
   def new
@@ -28,7 +28,14 @@ class GeneratorsController < ApplicationController
     output
   end
 
-  def ipsums
+  def edit
+    @generator = Generator.find(params[:id])
+  end
+
+  def update
+    @generator = Generator.find(params[:id])
+    @generator.update(generator_params)
+    redirect_to @generator
   end
 
   private

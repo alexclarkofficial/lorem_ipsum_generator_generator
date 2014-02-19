@@ -5,7 +5,7 @@ class Generator < ActiveRecord::Base
   has_attached_file :image, default_url: ""
   has_attached_file :logo, default_url: ""
 
-  has_many :lorem_ipsums
+  has_many :lorem_ipsums, dependent: :destroy
 
   validates(:name, presence: true, uniqueness: true)
 end

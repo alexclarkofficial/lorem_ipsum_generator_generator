@@ -11,6 +11,11 @@ class LoremIpsumsController < ApplicationController
     redirect_to :back
   end
 
+  def approve
+    LoremIpsum.find(params[:id]).update(approved: true)
+    redirect_to :back
+  end
+
   private
 
     def lorem_ipsums_params

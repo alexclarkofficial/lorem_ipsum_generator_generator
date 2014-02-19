@@ -1,0 +1,29 @@
+<% provide(:title, 'Update an Ipsum Generator') %>
+<h1>Update Ipsum Generator</h1>
+
+<div class="row">
+  <div class="large-12 columns">
+    <%= form_for @generator, :html => { multipart: true } do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :tagline %>
+      <%= f.text_field :tagline %>
+
+      <%= f.label :sub_tagline %>
+      <%= f.text_field :sub_tagline %>
+
+      <%= f.label :logo %>
+      <%= f.file_field :logo %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+
+      <%= f.label :bg_image %>
+      <%= f.file_field :bg_image %>
+
+      <%= f.submit "Update Ipsum Generator", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

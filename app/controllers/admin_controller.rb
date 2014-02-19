@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
 
   def index
-    @ipsums = Generator.find(params[:generator_id]).lorem_ipsums
+    @ipsums = LoremIpsum.where(generator_id: params[:generator_id])
   end
 end
