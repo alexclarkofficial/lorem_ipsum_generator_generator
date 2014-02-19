@@ -1,1 +1,2 @@
-<p><%= lorem_ipsum.content %></p>
+<p><%= lorem_ipsum.content %> <%= lorem_ipsum.approved %></p>
+<%= link_to "delete", lorem_ipsum, method: :delete, data: { confirm: "You sure?" } %>

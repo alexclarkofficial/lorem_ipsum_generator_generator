@@ -35,7 +35,7 @@ class GeneratorsController < ApplicationController
 
   def random_ipsum
     paragraph = ""
-    rand(AVG_PARAGRAPH).times do
+    (rand(AVG_PARAGRAPH) + 1).times do
       paragraph.concat @ipsums[rand(ipsums_count)].content
     end
     paragraph
@@ -48,7 +48,6 @@ class GeneratorsController < ApplicationController
   end
 
   def generator_params
-    binding.pry
     params.require(:generator).permit(:name, :tagline, :sub_tagline, :logo, :image, :bg_image)
   end
 end

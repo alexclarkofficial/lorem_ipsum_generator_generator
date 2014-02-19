@@ -5,6 +5,12 @@ class LoremIpsumsController < ApplicationController
     redirect_to Generator.find_by(id: lorem_ipsums_params[:generator_id])
   end
 
+  def destroy
+    LoremIpsum.find(params[:id]).destroy
+    flash[:success] = "Ipsum destroyed."
+    redirect_to :back
+  end
+
   private
 
     def lorem_ipsums_params

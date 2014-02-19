@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218023217) do
+ActiveRecord::Schema.define(version: 20140219195208) do
 
   create_table "generators", force: true do |t|
     t.string   "name"
@@ -38,8 +38,18 @@ ActiveRecord::Schema.define(version: 20140218023217) do
     t.integer  "generator_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "approved",     default: "f"
   end
 
   add_index "lorem_ipsums", ["generator_id"], name: "index_lorem_ipsums_on_generator_id"
+
+  create_table "submitted_ipsums", force: true do |t|
+    t.text     "content"
+    t.integer  "generator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "submitted_ipsums", ["generator_id"], name: "index_submitted_ipsums_on_generator_id"
 
 end
