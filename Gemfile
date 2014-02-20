@@ -18,6 +18,7 @@ gem 'paperclip', "~> 3.0"
 gem 'pry'
 gem 'foundation-rails'
 gem 'devise'
+gem 'bcrypt-ruby'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
