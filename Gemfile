@@ -17,6 +17,7 @@ gem 'jbuilder', '1.0.2'
 gem 'paperclip', "~> 3.0"
 gem 'pry'
 gem 'foundation-rails'
+gem 'devise'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

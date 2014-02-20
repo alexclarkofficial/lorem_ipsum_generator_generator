@@ -1,4 +1,5 @@
 IpsumGen::Application.routes.draw do
+  devise_for :users, only: [:sessions]
   resources :generators do
     resources :admin, only: [:index]
   end
@@ -7,6 +8,8 @@ IpsumGen::Application.routes.draw do
       post :approve
     end
   end
+
+  root :to => "generators#new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
