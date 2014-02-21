@@ -19,6 +19,7 @@ gem 'pry'
 gem 'foundation-rails', '5.1.1.0'
 gem 'devise', '3.2.1'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'font-awesome-rails'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
