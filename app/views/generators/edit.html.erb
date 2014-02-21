@@ -5,6 +5,23 @@
   </div>
 </div>
 <div class="row">
+  <div class="medium-10 medium-centered columns">
+    <h2>Ipsums</h2>
+    <table> 
+      <thead> 
+        <tr> 
+          <th width="600">Ipsum Content</th> 
+          <th width="150">Delete</th> 
+          <th width="150">Approve</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <%= render @generator.lorem_ipsums %>
+      </tbody> 
+    </table>
+  </div>
+</div>
+<div class="row">
   <div class="medium-5 medium-centered columns">
     <h2>Edit</h2>
     <%= form_for @generator, :html => { multipart: true } do |f| %>
@@ -29,22 +46,5 @@
 
       <%= f.submit "Update Ipsum Generator", class: "button small" %>
     <% end %>
-  </div>
-</div>
-<div class="row">
-  <div class="medium-10 medium-centered columns">
-    <h2>Ipsums</h2>
-    <table> 
-      <thead> 
-        <tr> 
-          <th>Ipsum Content</th> 
-          <th width="150">Delete</th> 
-          <th width="150">Approve</th> 
-        </tr> 
-      </thead> 
-      <tbody> 
-        <%= render @generator.lorem_ipsums %>
-      </tbody> 
-    </table>
   </div>
 </div>
