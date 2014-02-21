@@ -1,1 +1,19 @@
-<%= render @ipsums %>
+<% provide(:title, "Dashboard") %>
+<div class="row">
+  <div class="medium-6 medium-centered columns">
+    <h1>Generator Dashboard</h1>
+    <table> 
+      <thead> 
+        <tr> 
+          <th>Generator Name</th> 
+          <th width="150">Manage</th> 
+          <th width="150">New Ipsums</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <%= render @generators %>
+      </tbody> 
+    </table>
+    <%= link_to "Create a New Generator", new_generator_path, class:  "button" %>
+  </div>
+</div>

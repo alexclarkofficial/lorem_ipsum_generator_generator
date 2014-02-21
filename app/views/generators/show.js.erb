@@ -1,4 +1,4 @@
-$('#output').html("")
+$('#output-container').html("")
 $('#filler').remove()
 
-$('#output').append("<%= paragraphs(params[:num_paragraphs]).html_safe %>")
+$('#output-container').append("<%= paragraphs(params[:num_paragraphs]).html_safe %>")

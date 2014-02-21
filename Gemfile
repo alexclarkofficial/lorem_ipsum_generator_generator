@@ -16,9 +16,9 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 gem 'paperclip', "~> 3.0"
 gem 'pry'
-gem 'foundation-rails'
-gem 'devise'
-gem 'bcrypt-ruby'
+gem 'foundation-rails', '5.1.1.0'
+gem 'devise', '3.2.1'
+gem 'bcrypt-ruby', '3.0.1'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

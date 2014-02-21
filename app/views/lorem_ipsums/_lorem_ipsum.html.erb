@@ -1,6 +1,11 @@
-<p><%= lorem_ipsum.content %> | 
-  <%= link_to "delete", lorem_ipsum, method: :delete, data: { confirm: "Are you sure?" } %>
+<tr>
+  <td><%= lorem_ipsum.content %></td>
+  <td><span class="alert round label">
+    <%= link_to "delete", lorem_ipsum, method: :delete, data: { confirm: "Are you sure?" } %>
+  </span></td>
   <% unless lorem_ipsum.approved == 't' %>
-    | <%= link_to "approve", approve_lorem_ipsum_path(lorem_ipsum), method: :edit %>
+    <td><span class="success round label">
+      <%= link_to "approve", approve_lorem_ipsum_path(lorem_ipsum), method: :edit %>
+    </span></td>
   <% end %>
-</p>
+</tr>

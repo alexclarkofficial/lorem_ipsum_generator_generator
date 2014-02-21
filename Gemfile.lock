@@ -142,10 +142,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby
+  bcrypt-ruby (= 3.0.1)
   coffee-rails (= 4.0.1)
-  devise
-  foundation-rails
+  devise (= 3.2.1)
+  foundation-rails (= 5.1.1.0)
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
   paperclip (~> 3.0)

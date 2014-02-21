@@ -1,8 +1,12 @@
-<% provide(:title, 'Update an Ipsum Generator') %>
-<h1>Update Ipsum Generator</h1>
-
+<% provide(:title, 'Manage ' + @generator.name) %>
 <div class="row">
-  <div class="large-12 columns">
+  <div class="large-10 large-offset-1 columns">
+    <h1><%= link_to @generator.name, @generator %></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-5 medium-centered columns">
+    <h2>Edit</h2>
     <%= form_for @generator, :html => { multipart: true } do |f| %>
 
       <%= f.label :name %>
@@ -23,7 +27,24 @@
       <%= f.label :bg_image %>
       <%= f.file_field :bg_image %>
 
-      <%= f.submit "Update Ipsum Generator", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Update Ipsum Generator", class: "button small" %>
     <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-10 medium-centered columns">
+    <h2>Ipsums</h2>
+    <table> 
+      <thead> 
+        <tr> 
+          <th>Ipsum Content</th> 
+          <th width="150">Delete</th> 
+          <th width="150">Approve</th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <%= render @generator.lorem_ipsums %>
+      </tbody> 
+    </table>
   </div>
 </div>

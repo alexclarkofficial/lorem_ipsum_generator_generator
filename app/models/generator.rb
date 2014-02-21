@@ -8,4 +8,8 @@ class Generator < ActiveRecord::Base
   has_many :lorem_ipsums, dependent: :destroy
 
   validates(:name, presence: true, uniqueness: true)
+
+  def new_ipsum_count
+    self.lorem_ipsums.where(approved: false).count
+  end
 end

@@ -1,0 +1,7 @@
+<tr>
+  <td><%= link_to generator.name, generator_path(generator) %></td>
+  <td><%= link_to 'Manage', edit_generator_path(generator) %></td>
+  <% if generator.new_ipsum_count != 0 %>
+    <td>New Ipsums! <span class="alert round label"><%= generator.new_ipsum_count %></span></td>
+  <% end %>
+</tr>

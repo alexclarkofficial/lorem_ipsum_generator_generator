@@ -36,7 +36,7 @@ before_filter :authenticate_user!, except: :show
   def update
     @generator = Generator.find(params[:id])
     @generator.update(generator_params)
-    redirect_to @generator
+    redirect_to :back
   end
 
   private
@@ -44,7 +44,7 @@ before_filter :authenticate_user!, except: :show
   def random_ipsum
     paragraph = ""
     (rand(AVG_PARAGRAPH) + 1).times do
-      paragraph.concat @ipsums[rand(ipsums_count)].content
+      paragraph.concat @ipsums[rand(ipsums_count)].content + " "
     end
     paragraph
   end
