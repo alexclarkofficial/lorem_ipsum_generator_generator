@@ -76,7 +76,7 @@
       <div class="share-container">
         <!-- AddThis Button BEGIN -->
         <div class="addthis_toolbox addthis_default_style">
-          <a class="addthis_button_tweet at300b" addthis:url="http://crazyclientipsum.com" addthis:title="Make your designs really POP with Crazy Client Ipsum!"></a>
+          <a class="addthis_button_tweet at300b" tw:url=<%= request.original_url %> addthis:title="Make your designs really POP with <%= @generator.name %>!"></a>
           <a class="addthis_button_facebook_like at300b" fb:like:layout="button_count"></a>
         </div>
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-52af30d60148609c">
@@ -86,3 +86,7 @@
     </div>
   </div>
 </footer>
+<style media="screen">
+  .header-row:after { background-image: url(<%= @generator.bg_image %>); }
+  .fun-bg:after { background-image: url(<%= @generator.bg_image %>); }
+</style>

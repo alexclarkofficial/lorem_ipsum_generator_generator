@@ -1,10 +1,10 @@
 <tr>
   <td><%= lorem_ipsum.content %></td>
-  <td><span class="alert round label">
+  <td><span class="alert radius button tiny">
     <%= link_to "delete", lorem_ipsum, method: :delete, data: { confirm: "Are you sure?" } %>
   </span></td>
   <% unless lorem_ipsum.approved == 't' %>
-    <td><span class="success round label">
+    <td><span class="success radius button tiny">
       <%= link_to "approve", approve_lorem_ipsum_path(lorem_ipsum), method: :edit %>
     </span></td>
   <% end %>
