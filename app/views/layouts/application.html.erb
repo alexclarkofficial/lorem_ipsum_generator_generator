@@ -13,16 +13,21 @@
 
   <body>
 
-  <% if signed_in? %>
-    <d1 class="sub-nav">
-      <dt>ADMIN MODE</dt>
-      <dd><%= link_to 'Dashboard', root_path %></dd>
-      <dd><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></dd>
-    </d1>
-  <% end %>
+    <% if signed_in? %>
+      <d1 class="sub-nav">
+        <dt>ADMIN MODE</dt>
+      </d1>
+    <% end %>
 
     <%= yield %>
 
+    <% if signed_in? %>
+      <d1 class="sub-nav">
+        <dt>ADMIN MODE</dt>
+        <dd><%= link_to 'Dashboard', root_path %></dd>
+        <dd><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></dd>
+      </d1>
+    <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= javascript_include_tag "application" %>
