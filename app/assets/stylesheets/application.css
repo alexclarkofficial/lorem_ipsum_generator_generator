@@ -11,6 +11,8 @@
  *= require_self
  *= require foundation_and_overrides
  *= require custom
+ *= normalize.css
 
  *= require_tree .
+ *= require font-awesome
  */
