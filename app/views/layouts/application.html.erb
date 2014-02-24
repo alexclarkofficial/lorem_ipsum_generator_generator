@@ -25,6 +25,10 @@
       <d1 class="sub-nav">
         <dt>ADMIN MODE</dt>
         <dd><%= link_to 'Dashboard', root_path %></dd>
+        <% if @generator %>
+          <dd><%= link_to 'Manage this Generator', edit_generator_path(@generator) %></dd>
+        <% end %>
+        <dd><%= link_to 'New Generator', new_generator_path %></dd>
         <dd><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></dd>
       </d1>
     <% end %>
