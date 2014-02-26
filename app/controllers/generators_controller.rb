@@ -18,6 +18,7 @@ before_filter :authenticate_user!, except: :show
       redirect_to @generator
     else
       render 'new'
+      flash[:error] = "Name taken!"
     end
   end
 
@@ -35,8 +36,12 @@ before_filter :authenticate_user!, except: :show
 
   def update
     @generator = Generator.find(params[:id])
-    @generator.update(generator_params)
-    redirect_to :back
+    if @generator.update(generator_params)
+      redirect_to :back
+      flash[:success] = "Generator updated"
+    else
+      flash[:error] = "Update Failed"
+    end
   end
 
   private
