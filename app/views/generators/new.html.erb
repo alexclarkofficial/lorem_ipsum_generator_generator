@@ -1,8 +1,7 @@
-<% provide(:title, 'Create an Ipsum Generator') %>
-<h1>Create an Ipsum Generator</h1>
-
+<% provide(:title, 'Create New Generator') %>
 <div class="row">
-  <div class="large-12 columns">
+  <div class="medium-9 medium-centered columns">
+    <h2>Create New Generator</h2>
     <%= form_for @generator, :html => { multipart: true } do |f| %>
 
       <%= f.label :name %>
@@ -23,7 +22,7 @@
       <%= f.label :bg_image %>
       <%= f.file_field :bg_image %>
 
-      <%= f.submit "Create Ipsum Generator", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Create New Generator", class: "button small" %>
     <% end %>
   </div>
 </div>
